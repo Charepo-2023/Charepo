@@ -24,7 +24,7 @@
 
 ## **Storage Tracker**
 **Description:** The user will be able to store their things in packages and find them when they need them.  
-**Mobile:** (uses tracking, )  
+**Mobile:** Able to use anywhere 
 **Story:** Allows the users to find their stuff without worrying about misplacing it.  
 **Market:** People who need assistance with organization  
 **Habit:** When the user cannot find an item, they may form the habit of checking this app. When putting items away, users can form the habit of documenting its location within the app.  
