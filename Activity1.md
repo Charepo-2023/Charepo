@@ -15,7 +15,7 @@
  "*" are group votes 
 # Top 3:
 ## **Character Database**
-**Description:** Allow users (such as authors, artists, game developpers,etc) to create a database that stores their character information.
+**Description:** Allow users (such as authors, artists, game developpers,etc) to create a database that stores their character information.\n
 **Mobile:** The mobile experience allows for easy and on-the-go access. 
 **Story:** This app allows for a portable database of information on the user's characters. This allows the user to reference that information from any location with ease.
 **Market:** This app can be useful for authors, artists, game developers, and other people that create characters. 
