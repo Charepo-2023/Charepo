@@ -1,4 +1,4 @@
-**Idea Brainstorming:**
+# **Idea Brainstorming:**
 Habit Tracker *
 Pet Database
 Forum Like Social Media(ex. Facebook, Instagram)**
