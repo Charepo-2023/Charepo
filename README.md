@@ -36,6 +36,7 @@ A moblie app that allows users to store their character information in an easliy
  **Stretch Features**
  * Cloud Database
  * App customization 
+ * Comment on characters
 
 ## 2. Screen Archetypes
 
@@ -47,9 +48,7 @@ A moblie app that allows users to store their character information in an easliy
     - User can see an overview of all their character organization folders and any unorganized characters
     - User can click on the folders to see their individual characters
 - Explore Page
-    - User can see the characters that others have marked as public.
-- Search Page
-    - Users 
+    - User can see the characters that others have marked as public. 
 - Profile
     - User can customize their profile
 - Character Creation Page
