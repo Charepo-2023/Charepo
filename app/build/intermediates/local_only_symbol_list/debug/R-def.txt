@@ -1,0 +1,36 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable add_character
+drawable create_folder
+drawable delete_character
+drawable delete_folder
+drawable explore
+drawable home
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable profile
+id CharacterRV
+id FolderRV
+id addCharacterBtn
+id addFolderBtn
+id deleteCharacterBtn
+id deleteFolderBtn
+id explore_tabe
+id home_tab
+id profile_tab
+layout activity_main
+layout home_page
+menu bottom_navigation_tabs
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.Charepo
+xml backup_rules
+xml data_extraction_rules
