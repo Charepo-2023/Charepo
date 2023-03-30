@@ -93,4 +93,8 @@ A moblie app that allows users to store their character information in an easliy
 
 <img src="https://i.imgur.com/1N8ZxOF.jpg" width=600>
 
+## Build Progress GIFs
+
+<img src="https://i.imgur.com/5AISljR.gif" width=300>
+
 
