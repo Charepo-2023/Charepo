@@ -6,8 +6,9 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class DbHelper(context: Context) : SQLiteOpenHelper(context, "Charepo", null, 1){
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL("CREATE TABLE Character(USERID INTEGER PRIMARY KEY AUTOINCREMENT, CName TEXT, CDescription TEXT, CPicture BLOB)")
-        db?.execSQL("INSERT INTO Character(CName, CDescription, CPicture) VALUES('Dominic','???',NULL)")
+        db?.execSQL("CREATE TABLE Character(USERID INTEGER PRIMARY KEY AUTOINCREMENT, CName TEXT, CDescription TEXT, CPicture BLOB, CPrivate BOOLEAN)")
+        db?.execSQL("CREATE TABLE AccountInformation(USERID INTEGER PRIMARY KEY AUTOINCREMENT, UserName TEXT, Password TEXT, LoggedIn BOOLEAN)")
+        //db?.execSQL("INSERT INTO Character(CName, CDescription, CPicture) VALUES('Dominic','???',NULL)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
