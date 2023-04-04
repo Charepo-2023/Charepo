@@ -26,5 +26,6 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "Charepo", null, 1)
     fun AddNewAccount(EMAIL: Text, PASSWORD: Text,LoggedIn: Boolean, db: SQLiteDatabase?)
     {
         db?.execSQL("INSERT INTO AccountInformation(UserName, Password,LoggedIn) VALUES(EMail,PASSWORD,LoggedIn)")
+        
     }
 }
