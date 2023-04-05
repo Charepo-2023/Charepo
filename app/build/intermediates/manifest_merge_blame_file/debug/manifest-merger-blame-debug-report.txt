@@ -5,82 +5,97 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="28"
+8        android:minSdkVersion="30"
 8-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
 9-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml
 10
-11    <permission
-11-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\6492d4be1dafc14eeb126acfa6937b10\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-12        android:name="com.example.charepo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\6492d4be1dafc14eeb126acfa6937b10\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\6492d4be1dafc14eeb126acfa6937b10\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="com.example.charepo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\6492d4be1dafc14eeb126acfa6937b10\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\6492d4be1dafc14eeb126acfa6937b10\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:5:5-23:19
-18        android:allowBackup="true"
-18-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\6492d4be1dafc14eeb126acfa6937b10\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:7:9-65
-21        android:debuggable="true"
-22        android:extractNativeLibs="false"
-23        android:fullBackupContent="@xml/backup_rules"
-23-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:8:9-54
-24        android:icon="@mipmap/ic_launcher"
-24-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:9:9-43
-25        android:label="@string/app_name"
-25-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:10:9-41
-26        android:supportsRtl="true"
-26-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:11:9-35
-27        android:testOnly="true"
-28        android:theme="@style/Theme.Charepo" >
-28-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:12:9-45
-29        <activity
-29-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:14:9-22:20
-30            android:name="com.example.charepo.MainActivity"
-30-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:15:13-41
-31            android:exported="true" >
-31-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:16:13-36
-32            <intent-filter>
-32-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:17:13-21:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:18:17-69
-33-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:18:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:20:17-77
-35-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:20:27-74
-36            </intent-filter>
-37        </activity>
-38
-39        <provider
-39-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\2dfa71af9bee3680306de911b0d6d834\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-40            android:name="androidx.startup.InitializationProvider"
-40-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\2dfa71af9bee3680306de911b0d6d834\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-41            android:authorities="com.example.charepo.androidx-startup"
-41-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\2dfa71af9bee3680306de911b0d6d834\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-42            android:exported="false" >
-42-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\2dfa71af9bee3680306de911b0d6d834\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-43            <meta-data
-43-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\2dfa71af9bee3680306de911b0d6d834\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-44                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-44-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\2dfa71af9bee3680306de911b0d6d834\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-45                android:value="androidx.startup" />
-45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\2dfa71af9bee3680306de911b0d6d834\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-46            <meta-data
-46-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mikal\.gradle\caches\transforms-3\bb5b42d5797c4ee7606f08b968644baa\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-47                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-47-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mikal\.gradle\caches\transforms-3\bb5b42d5797c4ee7606f08b968644baa\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-48                android:value="androidx.startup" />
-48-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mikal\.gradle\caches\transforms-3\bb5b42d5797c4ee7606f08b968644baa\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-49        </provider>
-50    </application>
-51
-52</manifest>
+11    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+11-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:5:5-7:40
+11-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:6:9-66
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:8:5-81
+12-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:8:22-78
+13
+14    <permission
+14-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\9ab8d72609b93b1e3c5897c605ac8364\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.charepo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\9ab8d72609b93b1e3c5897c605ac8364\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\9ab8d72609b93b1e3c5897c605ac8364\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.charepo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\9ab8d72609b93b1e3c5897c605ac8364\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\9ab8d72609b93b1e3c5897c605ac8364\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:10:5-32:19
+21        android:allowBackup="true"
+21-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:11:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.9.0] C:\Users\mikal\.gradle\caches\transforms-3\9ab8d72609b93b1e3c5897c605ac8364\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+23        android:dataExtractionRules="@xml/data_extraction_rules"
+23-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:12:9-65
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:13:9-54
+27        android:icon="@mipmap/ic_launcher"
+27-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:14:9-43
+28        android:label="@string/app_name"
+28-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:16:9-41
+29        android:requestLegacyExternalStorage="true"
+29-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:15:9-52
+30        android:supportsRtl="true"
+30-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:17:9-35
+31        android:testOnly="true"
+32        android:theme="@style/Theme.Charepo" >
+32-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:18:9-45
+33        <activity
+33-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:20:9-22:40
+34            android:name="com.example.charepo.FileList"
+34-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:21:13-37
+35            android:exported="false" />
+35-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:22:13-37
+36        <activity
+36-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:23:9-31:20
+37            android:name="com.example.charepo.MainActivity"
+37-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:24:13-41
+38            android:exported="true" >
+38-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:25:13-36
+39            <intent-filter>
+39-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:26:13-30:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:27:17-69
+40-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:27:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:29:17-77
+42-->C:\Users\mikal\AndroidStudioProjects\Charepo\app\src\main\AndroidManifest.xml:29:27-74
+43            </intent-filter>
+44        </activity>
+45
+46        <provider
+46-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\73abe0b323b9e45eb6d48789e74f41c0\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+47            android:name="androidx.startup.InitializationProvider"
+47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\73abe0b323b9e45eb6d48789e74f41c0\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+48            android:authorities="com.example.charepo.androidx-startup"
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\73abe0b323b9e45eb6d48789e74f41c0\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+49            android:exported="false" >
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\73abe0b323b9e45eb6d48789e74f41c0\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+50            <meta-data
+50-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\73abe0b323b9e45eb6d48789e74f41c0\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\73abe0b323b9e45eb6d48789e74f41c0\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+52                android:value="androidx.startup" />
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mikal\.gradle\caches\transforms-3\73abe0b323b9e45eb6d48789e74f41c0\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+53            <meta-data
+53-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mikal\.gradle\caches\transforms-3\ca29b3e243c7c9bf4050c53ae15f3b57\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+54-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mikal\.gradle\caches\transforms-3\ca29b3e243c7c9bf4050c53ae15f3b57\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+55                android:value="androidx.startup" />
+55-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mikal\.gradle\caches\transforms-3\ca29b3e243c7c9bf4050c53ae15f3b57\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+56        </provider>
+57    </application>
+58
+59</manifest>

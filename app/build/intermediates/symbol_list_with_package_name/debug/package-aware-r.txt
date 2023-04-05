@@ -2711,6 +2711,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable characterpage
 drawable create_folder
 drawable delete_character
 drawable delete_folder
@@ -2720,6 +2721,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable explore
+drawable file
+drawable folder
 drawable home
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
@@ -2807,6 +2810,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable profile
+drawable profilepage
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2814,7 +2818,6 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id CharacterRV
 id FUNCTION
 id FolderRV
 id META
@@ -2883,8 +2886,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id addCharacterBtn
-id addFolderBtn
+id add_character_btn
+id add_folder_btn
 id alertTitle
 id aligned
 id all
@@ -2925,6 +2928,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id characterText
 id checkbox
 id checked
 id chronometer
@@ -2956,8 +2960,8 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
-id deleteCharacterBtn
-id deleteFolderBtn
+id delete_character_btn
+id delete_folder_btn
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -2973,6 +2977,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id dobText
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2988,6 +2993,8 @@ id easeOut
 id east
 id edit_query
 id elastic
+id emailFromDatabase
+id emailText
 id embed
 id end
 id endToStart
@@ -3002,6 +3009,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id firstNameText
 id fitCenter
 id fitEnd
 id fitStart
@@ -3010,6 +3018,8 @@ id fitXY
 id fixed
 id flip
 id floating
+id folder_icon
+id folder_name
 id forever
 id fragment_container_view_tag
 id frost
@@ -3035,6 +3045,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id indeterminate
@@ -3046,6 +3057,8 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
+id lastNameFromDtabase
+id lastNameText
 id layout
 id left
 id leftToRight
@@ -3055,6 +3068,9 @@ id line3
 id linear
 id listMode
 id list_item
+id login
+id loginButton
+id logoutButton
 id m3_side_sheet
 id marquee
 id masked
@@ -3115,6 +3131,9 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nameFromDatabase
+id name_input
+id navigation_bar
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3134,6 +3153,7 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id off
+id ok_button
 id on
 id onInterceptTouchReturnSwipe
 id outline
@@ -3145,6 +3165,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
 id password_toggle
 id path
 id pathRelative
@@ -3154,6 +3175,7 @@ id pin
 id position
 id postLayout
 id pressed
+id profilePic
 id profile_tab
 id progress_circular
 id progress_horizontal
@@ -3240,6 +3262,7 @@ id staticPostLayout
 id stop
 id stretch
 id submenuarrow
+id submitButton
 id submit_area
 id supportScrollUp
 id tabMode
@@ -3259,10 +3282,15 @@ id tag_window_insets_animation_callback
 id text
 id text2
 id textEnd
+id textInput
+id textInputLayout
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView4
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3293,6 +3321,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id username
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3417,7 +3446,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_file_list
 layout activity_main
+layout character_item
+layout characterpage
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3434,7 +3466,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout folder_item
+layout folder_popup
 layout home_page
+layout login_page
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3492,6 +3527,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout profilepage
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

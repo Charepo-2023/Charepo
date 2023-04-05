@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/addFolderBtn"
+        android:id="@+id/add_folder_btn"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:src="@drawable/create_folder"
@@ -14,25 +14,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/deleteFolderBtn"
+        android:id="@+id/delete_folder_btn"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:src="@drawable/delete_folder"
-        app:layout_constraintStart_toEndOf="@+id/addFolderBtn"
+        app:layout_constraintStart_toEndOf="@+id/add_folder_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/addCharacterBtn"
+        android:id="@+id/add_character_btn"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:src="@drawable/add_character"
-        app:layout_constraintEnd_toStartOf="@+id/deleteCharacterBtn"
+        app:layout_constraintEnd_toStartOf="@+id/delete_character_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/deleteCharacterBtn"
+        android:id="@+id/delete_character_btn"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:src="@drawable/delete_character"
@@ -43,23 +43,25 @@
         android:id="@+id/FolderRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deleteFolderBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/delete_folder_btn" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navigation_tabs"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/CharacterRV"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FolderRV" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/CharacterRV"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/FolderRV" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
