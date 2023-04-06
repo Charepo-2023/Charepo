@@ -1,5 +1,7 @@
 # Milestone 1 - Charepo
 
+#Ricky 
+
 ## Table of Contents
 
 1. [Overview](#Overview)
@@ -95,6 +97,6 @@ A moblie app that allows users to store their character information in an easliy
 
 ## Build Progress GIFs
 
-<img src="https://i.imgur.com/5AISljR.gif" width=300>
+<img src="https://i.imgur.com/lrGH2hw.gif" width=300>
 
 
