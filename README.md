@@ -92,16 +92,15 @@ A moblie app that allows users to store their character information in an easliy
     - -> None
 
 ## Wireframes
-<img width="176" alt="CharacterPage" src="https://user-images.githubusercontent.com/27832210/230461639-a98ef957-d80d-4eda-82a8-6d7f313514d3.PNG">
-<img width="175" alt="CharCreatePage" src="https://user-images.githubusercontent.com/27832210/230461725-82c17149-41d5-4143-8cce-5d259ab3e1be.PNG">
-<img width="173" alt="CharStarter" src="https://user-images.githubusercontent.com/27832210/230461742-4cfef2c1-ecbd-4779-9592-32d07a6f4b06.PNG">
+<img src="https://i.imgur.com/1N8ZxOF.jpg" width=600>
+<img width="176" alt="CharacterPage" src="https://user-images.githubusercontent.com/27832210/230461639-a98ef957-d80d-4eda-82a8-6d7f313514d3.PNG"><img width="175" alt="CharCreatePage" src="https://user-images.githubusercontent.com/27832210/230461725-82c17149-41d5-4143-8cce-5d259ab3e1be.PNG"><img width="173" alt="CharStarter" src="https://user-images.githubusercontent.com/27832210/230461742-4cfef2c1-ecbd-4779-9592-32d07a6f4b06.PNG">
 <img width="173" alt="ExplorePage" src="https://user-images.githubusercontent.com/27832210/230461974-3c5ca1ff-5250-4fe5-ba65-64bff45c6f42.PNG">
 <img width="178" alt="HomePage" src="https://user-images.githubusercontent.com/27832210/230461991-7d6c55a2-5780-49bf-a0a7-9547c959ce28.PNG">
 <img width="177" alt="LoginPage" src="https://user-images.githubusercontent.com/27832210/230462009-3109f661-70e9-4ea8-814f-ad9ee7b3533f.PNG">
 <img width="179" alt="OpenedFile" src="https://user-images.githubusercontent.com/27832210/230462027-b9cb1932-9a63-4982-841c-b31453b1f144.PNG">
 <img width="180" alt="RegistrationPage" src="https://user-images.githubusercontent.com/27832210/230462042-f772d2f7-616c-43d3-ad01-658db8ff737f.PNG">
 
-<img src="https://i.imgur.com/1N8ZxOF.jpg" width=600>
+
 
 ## Build Progress GIFs
 
