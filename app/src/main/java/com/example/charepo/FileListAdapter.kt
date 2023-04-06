@@ -1,13 +1,13 @@
 package com.example.charepo
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import java.io.File
 
@@ -46,5 +46,22 @@ class FileListAdapter(private val context: Context, private val fileList: Array<
                 context.startActivity(intent)
             }
         }
+
     }
+
+//    fun folderNamePopup() {
+//
+//        val mView = LayoutInflater.from(MainActivity()).inflate(R.layout.folder_popup, null)
+//        val folderNameInput = mView.findViewById<EditText>(R.id.name_input)
+//        val cancelBtn = mView.findViewById<Button>(R.id.cancel_button)
+//        val okBtn = mView.findViewById<Button>(R.id.ok_button)
+//
+//        val nameBuilder = AlertDialog.Builder(MainActivity())
+//        nameBuilder.setTitle("Folder Name")
+//        nameBuilder.setView(mView)
+//        nameBuilder.create()
+//        nameBuilder.show()
+//    }
+
+
 }

@@ -1,4 +1,4 @@
-#Tue Apr 04 21:06:34 EDT 2023
+#Thu Apr 06 01:26:37 EDT 2023
 base.2=C\:\\Users\\mikal\\AndroidStudioProjects\\Charepo\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
 path.2=14/classes.dex
 base.1=C\:\\Users\\mikal\\AndroidStudioProjects\\Charepo\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

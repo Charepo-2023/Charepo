@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-main-31:\\xml\\backup_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-main-31:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-main-31:\\xml\\backup_rules.xml"
     },
     {
         "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\layout_character_item.xml.flat",
@@ -38,6 +38,10 @@
     {
         "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\layout_profilepage.xml.flat",
         "source": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-main-31:\\layout\\profilepage.xml"
+    },
+    {
+        "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\layout_explore_page.xml.flat",
+        "source": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-main-31:\\layout\\explore_page.xml"
     },
     {
         "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -114,6 +118,10 @@
     {
         "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-main-31:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\layout_registration.xml.flat",
+        "source": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-main-31:\\layout\\registration.xml"
     },
     {
         "merged": "C:\\Users\\mikal\\.gradle\\daemon\\7.5\\com.example.charepo.app-merged_res-29:\\menu_bottom_navigation_tabs.xml.flat",

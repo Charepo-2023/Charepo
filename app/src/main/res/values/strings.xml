@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Charepo</string>
+    <string name="owner">Owner</string>
+    <string name="charname">Character Name</string>
 </resources>
