@@ -111,7 +111,7 @@ Beginning Home Page Design
 Accessing the phone's folders for navigation
 
 <img src="https://i.imgur.com/lrGH2hw.gif" width=300>
-Change the folder system so it is not accessing the phone's actual folders. Just using coded objects
+Change the folder system so it is not accessing the phone's actual folders. Just using coded 'folder' objects. Back button implementation included also.
 
 <img src="https://i.imgur.com/mFedynj.gif" width=300>
 
