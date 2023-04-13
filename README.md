@@ -93,7 +93,7 @@ A moblie app that allows users to store their character information in an easliy
 
 ## Wireframes
 <p float="left">
-<img src="https://i.imgur.com/1N8ZxOF.jpg" width=200>
+<img src="https://i.imgur.com/1N8ZxOF.jpg" width=800>
 <img width="176" alt="CharacterPage" src="https://user-images.githubusercontent.com/27832210/230461639-a98ef957-d80d-4eda-82a8-6d7f313514d3.PNG" width=200>
 <img width="175" alt="CharCreatePage" src="https://user-images.githubusercontent.com/27832210/230461725-82c17149-41d5-4143-8cce-5d259ab3e1be.PNG" width=200>
 <img width="173" alt="CharStarter" src="https://user-images.githubusercontent.com/27832210/230461742-4cfef2c1-ecbd-4779-9592-32d07a6f4b06.PNG" width=200>
