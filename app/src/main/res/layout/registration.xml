@@ -2,19 +2,35 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/image">
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
 
+        android:fontFamily="@font/charm_bold"
+        android:gravity="center"
+        android:text="Registration"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <Button
         android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sign_up"
+        android:text="sign up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.823"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692" />
+        app:layout_constraintVertical_bias="0.692"
+        android:backgroundTint="@color/silver"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/cancel"
@@ -26,29 +42,33 @@
         app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692" />
+        app:layout_constraintVertical_bias="0.692"
+        android:backgroundTint="@color/silver"
+        android:textColor="@color/black"
+        />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="username_hint"
+        android:hint="Enter Username"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.285"
+        android:autofillHints=""
+        android:background="@drawable/rounded_edittext"/>
     <EditText
         android:id="@+id/PasswordRepeat"
 
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="password_repeat_hint"
+        android:hint="Re-Enter Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,21 +76,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.525"
-        android:autofillHints="" />
+        android:autofillHints=""
+        android:background="@drawable/rounded_edittext"/>
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="enter_password_hint"
+        android:hint="Enter Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.405"
+        android:autofillHints=""
+        android:background="@drawable/rounded_edittext"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
