@@ -110,8 +110,10 @@ Beginning Home Page Design
 
 <img src="https://i.imgur.com/5AISljR.gif" width=300>
 Accessing the phone's folders for navigation
+
 <img src="https://i.imgur.com/lrGH2hw.gif" width=300>
 Change the folder system so it is not accessing the phone's actual folders. Just using coded objects
+
 <img src="https://i.imgur.com/mFedynj.gif" width=300>
 
 
