@@ -114,6 +114,9 @@ Accessing the phone's folders for navigation
 Change the folder system so it is not accessing the phone's actual folders. Just using coded 'folder' objects. Back button implementation included also.
 
 <img src="https://i.imgur.com/mFedynj.gif" width=300>
+Add folder, modfiy folder, and delete folder functionality implemented. 
+
+<img src = "https://i.imgur.com/ettryRE.gif" width=300>
 
 
 
