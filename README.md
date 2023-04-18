@@ -107,16 +107,16 @@ A moblie app that allows users to store their character information in an easliy
 ## Build Progress GIFs
 Beginning Home Page Design 
 
-<img src="https://i.imgur.com/5AISljR.gif" height=300>
+<img src="https://i.imgur.com/5AISljR.gif" height=350>
 Accessing the phone's folders for navigation
 
-<img src="https://i.imgur.com/lrGH2hw.gif" height=300>
+<img src="https://i.imgur.com/lrGH2hw.gif" height=350>
 Change the folder system so it is not accessing the phone's actual folders. Just using coded 'folder' objects. Back button implementation included also.
 
-<img src="https://i.imgur.com/mFedynj.gif" height=300>
+<img src="https://i.imgur.com/mFedynj.gif" height=350>
 Add folder, modfiy folder, and delete folder functionality implemented. 
 
-<img src = "https://i.imgur.com/ettryRE.gif" height=300>
+<img src = "https://i.imgur.com/ettryRE.gif" height=350>
 
 
 
