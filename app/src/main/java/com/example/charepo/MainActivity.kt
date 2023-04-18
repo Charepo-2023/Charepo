@@ -2,12 +2,8 @@ package com.example.charepo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Environment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.charepo.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val fragmentManager : FragmentManager = supportFragmentManager
-        val homeFragment : Fragment = RecyclerFragment()
+        val homeFragment : Fragment = HomeFragment()
+
 
         val navagationBar = findViewById<BottomNavigationView>(R.id.btmNavBar)
         navagationBar.setOnItemSelectedListener { item ->
@@ -30,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         navagationBar.selectedItemId = R.id.home_tab
 
     }
+
 
 
 }

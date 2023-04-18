@@ -10,6 +10,7 @@ open class HomeRecyclerViewItem {
         var icon: Icon? = null
     ) : HomeRecyclerViewItem()
 
+
     data class CharacterItem (
        var name: String? = null,
        var directory: String? = null,
@@ -18,5 +19,15 @@ open class HomeRecyclerViewItem {
        var characterDescription: String? = null
 
     ) : HomeRecyclerViewItem()
+
+    fun setName(item: HomeRecyclerViewItem,newName:String){
+        if (item is FolderItem){
+            item.name = newName
+        }
+        if (item is CharacterItem){
+            item.name = newName
+        }
+    }
+
 
 }

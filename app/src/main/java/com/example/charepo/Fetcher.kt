@@ -32,8 +32,8 @@ class Fetcher {
                 return itemList
             }
 
-            fun initializeAdapter(givenContext: Context,list:MutableList<HomeRecyclerViewItem>, recyclerFragment: RecyclerFragment): RecyclerAdapter{
-                recyclerAdapter = RecyclerAdapter(givenContext,list,recyclerFragment)
+            fun initializeAdapter(givenContext: Context, list:MutableList<HomeRecyclerViewItem>, homeFragment: HomeFragment): RecyclerAdapter{
+                recyclerAdapter = RecyclerAdapter(givenContext,list,homeFragment)
                 itemList = list
                 return recyclerAdapter
             }
@@ -41,6 +41,23 @@ class Fetcher {
             fun updateAdapter(){
                 sortList(itemList)
                 recyclerAdapter.notifyDataSetChanged()
+            }
+
+            fun updateFolderName(oldName:String, newName:String, changingItem: HomeRecyclerViewItem){
+                for (i in itemList){
+                    if(i is HomeRecyclerViewItem.CharacterItem){
+                        if (i.directory == oldName){
+                            i.directory = newName
+                        }
+                    }
+                    if (i is HomeRecyclerViewItem.FolderItem){
+                        if (i.directory == oldName){
+                            i.directory = newName
+                        }
+                    }
+                }
+                changingItem.setName(changingItem,newName)
+                updateAdapter()
             }
 
 
