@@ -12,15 +12,15 @@
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        a
+        android:layout_marginTop="200dp"
         android:fontFamily="@font/charm_bold"
         android:gravity="center"
         android:text="Login"
         android:textColor="@color/black"
-        android:textSize="35dp"
 
+        android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,16 +29,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext"
         android:hint="Username"
-        android:padding="20dp"
+        android:padding="10dp"
+
+
         android:textColor="@color/black"
         android:textSize="35dp"
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="@+id/login"
-        tools:layout_editor_absoluteY="239dp"
-        android:background="@drawable/rounded_edittext"/>
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.035" />
 
     <EditText
         android:id="@+id/password"
@@ -46,27 +49,57 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/username"
         android:layout_margin="10dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/rounded_edittext"
         android:hint="Password"
-        android:padding="20dp"
+        android:padding="10dp"
+
         android:textColor="@color/black"
         android:textSize="35dp"
-
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/username"
         app:layout_constraintTop_toBottomOf="@+id/username"
-        android:background="@drawable/rounded_edittext"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password"
         android:backgroundTint="@color/silver"
-        android:textColor="@color/black"/>
+        android:text="Sign up"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
+        app:layout_constraintVertical_bias="0.187" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/silver"
+        android:text="Login"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/charepologo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

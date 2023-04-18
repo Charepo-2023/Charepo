@@ -16,11 +16,17 @@ class Register : AppCompatActivity() {
         val password=findViewById<EditText>(R.id.Password).text
         val password2=findViewById<EditText>(R.id.PasswordRepeat).text
         val signUp=findViewById<Button>(R.id.signUp)
+        val cancel=findViewById<Button>(R.id.cancel)
 
         //List for usernames and passwords
         val userList= ArrayList<String>()
         val passList=ArrayList<String>()
 
+        //Button to go back to the main page
+        cancel.setOnClickListener(){
+
+        }
+        //Button for sign up
         signUp.setOnClickListener(){
             val user=username.toString()
             val pass=password.toString()
