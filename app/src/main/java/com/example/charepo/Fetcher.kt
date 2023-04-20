@@ -64,14 +64,14 @@ class Fetcher {
 
             fun getEmails(): MutableList<HomeRecyclerViewItem>{
             val data : MutableList<HomeRecyclerViewItem> =ArrayList()
-            data.add(HomeRecyclerViewItem.CharacterItem("James", directory = "Home"))
+            data.add(HomeRecyclerViewItem.CharacterItem("James", directory = "Home", characterDescription = "This is James"))
             data.add(HomeRecyclerViewItem.FolderItem("Women", directory = "root"))
             data.add(HomeRecyclerViewItem.FolderItem("Book 1", directory = "root"))
-            data.add(HomeRecyclerViewItem.CharacterItem("Charlie", directory = "root"))
+            data.add(HomeRecyclerViewItem.CharacterItem("Charlie", directory = "root", characterDescription = "Charlie from the chocolate factory"))
             data.add(HomeRecyclerViewItem.FolderItem("Book 6", directory = "root"))
             data.add(HomeRecyclerViewItem.FolderItem("Blue","Book 1"))
             data.add(HomeRecyclerViewItem.FolderItem("Red","Book 1"))
-            data.add(HomeRecyclerViewItem.CharacterItem("Pete","Book 1"))
+            data.add(HomeRecyclerViewItem.CharacterItem("Pete","Book 1", characterDescription = "Pete lives in the forest and tracks animals."))
             return data
         }
 

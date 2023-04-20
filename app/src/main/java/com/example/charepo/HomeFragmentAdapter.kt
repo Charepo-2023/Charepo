@@ -1,6 +1,7 @@
 package com.example.charepo
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -89,7 +90,14 @@ class RecyclerAdapter(
     internal inner class CharacterViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
         fun bind(item:HomeRecyclerViewItem.CharacterItem){
             itemView.findViewById<TextView>(R.id.characterName).text = item.name
-            itemView.findViewById<ImageView>(R.id.characterImage).setImageResource(R.drawable.ic_launcher_background)
+            itemView.findViewById<ImageView>(R.id.characterImage).setImageResource(R.drawable.default_character_icon)
+
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, CharacterDetail::class.java)
+                intent.putExtra("Name",item.name)
+                intent.putExtra("Description",item.characterDescription)
+                itemView.context.startActivity(intent)
+            }
         }
     }
 

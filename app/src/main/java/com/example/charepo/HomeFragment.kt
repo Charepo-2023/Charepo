@@ -1,6 +1,7 @@
 package com.example.charepo
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,6 +29,7 @@ class HomeFragment : Fragment() {
         var itemList = Fetcher.getEmails()
 
         val addFolderButton = view.findViewById<ImageButton>(R.id.add_folder_btn)
+        val addCharacterButton = view.findViewById<ImageButton>(R.id.add_character_btn)
         val adapter = Fetcher.initializeAdapter(view.context,itemList,this)
         recyclerViewItem.adapter = adapter
         recyclerViewItem.layoutManager = GridLayoutManager(this.context,2)
@@ -35,6 +37,11 @@ class HomeFragment : Fragment() {
 
         addFolderButton.setOnClickListener {
             createNewFolder(view.context)
+        }
+
+        addCharacterButton.setOnClickListener{
+            val intent = Intent(view.context, CharacterCreationForm::class.java)
+            view.context.startActivity(intent)
         }
 
         //Code for the back button, needs to be double clicked at the moment

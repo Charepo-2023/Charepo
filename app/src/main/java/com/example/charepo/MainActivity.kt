@@ -13,13 +13,16 @@ class MainActivity : AppCompatActivity() {
 
         val fragmentManager : FragmentManager = supportFragmentManager
         val homeFragment : Fragment = HomeFragment()
-
+        val exploreFragment : Fragment = ExploreFragment()
+        val profileFragment : Fragment = ProfileFragment()
 
         val navagationBar = findViewById<BottomNavigationView>(R.id.btmNavBar)
         navagationBar.setOnItemSelectedListener { item ->
             lateinit var fragment: Fragment
             when(item.itemId){
                 R.id.home_tab -> fragment = homeFragment
+                R.id.explore_tab -> fragment = exploreFragment
+                R.id.profile_tab -> fragment = profileFragment
             }
             fragmentManager.beginTransaction().replace(R.id.frame_layout,fragment).commit()
             true

@@ -15,8 +15,8 @@ open class HomeRecyclerViewItem {
        var name: String? = null,
        var directory: String? = null,
        var characterImage: Image? = null,
+       var characterDescription: String? = null,
        var isPublic : Int? = 0,
-       var characterDescription: String? = null
 
     ) : HomeRecyclerViewItem()
 

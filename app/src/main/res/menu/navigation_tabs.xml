@@ -17,4 +17,11 @@
         android:icon="@drawable/home_icon"
         app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/profile_tab"
+        android:title="Profile"
+        android:icon="@drawable/profile"
+        app:showAsAction="ifRoom"
+        />
+
 </menu>
