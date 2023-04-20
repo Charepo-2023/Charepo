@@ -29,9 +29,9 @@ A moblie app that allows users to store their character information in an easliy
  * Enter character information [In Progress]
  * Create folders to have better organization [✔️]
  * Store the character information to a database [In Progress]
- * User Profile 
- * Search Feature
- * Share character information
+ * User Profile [In Progress]
+ * Search Feature [In Progress]
+ * Share character information [In Progress]
  * Nice app design [In Progress]
 
  **Stretch Features**
