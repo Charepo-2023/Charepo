@@ -119,5 +119,8 @@ Add folder, modfiy folder, and delete folder functionality implemented.
 
 <img src = "https://i.imgur.com/ettryRE.gif" height=350>
 
+<img src="https://i.ibb.co/tM7wbvT/Registration-Functionality-Test.gif" alt="Registration-Functionality-Test" border="0">
+Register a user
+
 
 
