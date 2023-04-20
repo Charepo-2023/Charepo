@@ -26,12 +26,13 @@ A moblie app that allows users to store their character information in an easliy
 ### 1. User Features (Required and Optional)
 
 **Required Features** 
- * Enter character information
- * Create folders to have better organization
- * Store the character information to a database
- * User Profile
+ * Enter character information [In Progress]
+ * Create folders to have better organization [✔️]
+ * Store the character information to a database [In Progress]
+ * User Profile 
  * Search Feature
  * Share character information
+ * Nice app design [In Progress]
 
  **Stretch Features**
  * Cloud Database
