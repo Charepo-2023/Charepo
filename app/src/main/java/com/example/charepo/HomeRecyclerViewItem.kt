@@ -10,14 +10,15 @@ open class HomeRecyclerViewItem {
         var icon: Icon? = null
     ) : HomeRecyclerViewItem()
 
-
     data class CharacterItem (
        var name: String? = null,
-       var directory: String? = null,
-       var characterImage: Image? = null,
+       var characterImages: MutableList<Image>? = null,
+       var birthday : String? = null,
+       var gender : String? = null,
+       var race: String? = null,
        var characterDescription: String? = null,
        var isPublic : Int? = 0,
-
+       var directory: String? = null
     ) : HomeRecyclerViewItem()
 
     fun setName(item: HomeRecyclerViewItem,newName:String){
