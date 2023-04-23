@@ -2,6 +2,7 @@ package com.example.charepo
 
 import android.graphics.drawable.Icon
 import android.media.Image
+import android.net.Uri
 import android.widget.ImageView
 open class HomeRecyclerViewItem {
     data class FolderItem (
@@ -11,14 +12,14 @@ open class HomeRecyclerViewItem {
     ) : HomeRecyclerViewItem()
 
     data class CharacterItem (
-       var name: String? = null,
-       var characterImages: MutableList<Image>? = null,
-       var birthday : String? = null,
-       var gender : String? = null,
-       var race: String? = null,
-       var characterDescription: String? = null,
-       var isPublic : Int? = 0,
-       var directory: String? = null
+        var name: String? = null,
+        var characterImages: ArrayList<Uri>? = null,
+        var birthday : String? = null,
+        var gender : String? = null,
+        var race: String? = null,
+        var characterDescription: String? = null,
+        var isPublic : Int? = 0,
+        var directory: String? = null
     ) : HomeRecyclerViewItem()
 
     fun setName(item: HomeRecyclerViewItem,newName:String){

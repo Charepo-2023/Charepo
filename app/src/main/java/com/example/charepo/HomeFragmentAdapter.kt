@@ -2,6 +2,7 @@ package com.example.charepo
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -94,8 +95,7 @@ class RecyclerAdapter(
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, CharacterDetail::class.java)
-                intent.putExtra("Name",item.name)
-                intent.putExtra("Description",item.characterDescription)
+                Fetcher.setCurrentCharacterVal(item)
                 itemView.context.startActivity(intent)
             }
         }

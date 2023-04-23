@@ -1,155 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/name_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Enter name"
-        android:inputType="textPersonName"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/description_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Description: "
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/race_label" />
+        <TextView
+            android:id="@+id/description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Description: "
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/race_label" />
 
-    <EditText
-        android:id="@+id/description_input"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:lines="5"
-        android:hint="Enter Character Description"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_label" />
+        <EditText
+            android:id="@+id/description_input"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:hint="Enter Character Description"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_label" />
 
-    <TextView
-        android:id="@+id/images_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Images "
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/image_upload"
-        app:layout_constraintStart_toStartOf="@+id/image_upload"
-        app:layout_constraintTop_toBottomOf="@+id/image_upload" />
+        <Button
+            android:id="@+id/image_upload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Images "
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageRV"
+            app:layout_constraintStart_toStartOf="@+id/imageRV"
+            app:layout_constraintTop_toBottomOf="@+id/imageRV" />
 
-    <ImageView
-        android:id="@+id/image_upload"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_input"
-        app:srcCompat="@drawable/upload_icon" />
+        <Switch
+            android:id="@+id/public_switch"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:text="Make Public"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_input" />
 
-    <Switch
-        android:id="@+id/public_switch"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:text="Make Public"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/submit_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_input"
-         />
-
-    <Button
-        android:id="@+id/submit_btn"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
-        android:text="Submit"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:text="Submit"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/public_switch" />
 
 
-    <Spinner
-        android:id="@+id/gender_dropdown"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/gender_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gender_label" />
+        <Spinner
+            android:id="@+id/gender_dropdown"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="16dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="@+id/gender_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gender_label"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/gender_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Gender: "
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthday_label" />
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Gender: "
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthday_label" />
 
-    <TextView
-        android:id="@+id/birthday_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Birthday :"
-        android:textSize="30sp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/images_label" />
+        <TextView
+            android:id="@+id/birthday_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birthday :"
+            android:textSize="30sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_upload_btn" />
 
-    <TextView
-        android:id="@+id/race_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Race: "
-        android:textSize="30sp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_label" />
+        <TextView
+            android:id="@+id/race_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Race: "
+            android:textSize="30sp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_label" />
 
-    <EditText
-        android:id="@+id/birthday_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:ems="7"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/gender_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/birthday_label" />
+        <EditText
+            android:id="@+id/birthday_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:ems="7"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/gender_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/birthday_label" />
 
-    <EditText
-        android:id="@+id/race_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="7"
-        android:textSize="25sp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/race_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_label"
-         />
+        <EditText
+            android:id="@+id/race_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:ems="7"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/race_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_label" />
 
+    <!--    <HorizontalScrollView-->
+    <!--        android:id="@+id/horizontalScrollView"-->
+    <!--        android:layout_width="180dp"-->
+    <!--        android:layout_height="150dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/name_input">-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/image_upload_holder"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:orientation="horizontal" />-->
+    <!--    </HorizontalScrollView>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/imageRV"
+            android:layout_width="250dp"
+            android:layout_height="220dp"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_input"
+            tools:listitem="@layout/image_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

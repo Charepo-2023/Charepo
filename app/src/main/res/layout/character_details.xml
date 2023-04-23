@@ -1,57 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/character_name"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Character Name"
-        android:textAlignment="center"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/character_name"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Character Name"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <HorizontalScrollView
-        android:id="@+id/character_image_scroll"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/character_name"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:id="@+id/character_image_linear_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/default_character_icon"
-
-                />
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/default_character_icon" />
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
-
-    <ImageButton
+        <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,20 +63,23 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_label" />
+        app:layout_constraintTop_toBottomOf="@+id/description_label"
+        />
 
-    <TextView
-        android:id="@+id/birthday_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:text="Birthday: "
-        android:textStyle="bold"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/character_image_scroll" />
+        <TextView
+            android:id="@+id/birthday_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:text="Birthday: "
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageRV" />
 
     <TextView
         android:id="@+id/birthday"
@@ -136,7 +113,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/gender_label"
         app:layout_constraintStart_toStartOf="@+id/birthday"
         app:layout_constraintTop_toTopOf="@+id/gender_label"
-         />
+        />
     <TextView
         android:id="@+id/race_label"
         android:layout_width="wrap_content"
@@ -160,4 +137,16 @@
         app:layout_constraintTop_toTopOf="@+id/race_label"
         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/imageRV"
+            android:layout_width="250dp"
+            android:layout_height="220dp"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_name"
+            tools:listitem="@layout/image_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
