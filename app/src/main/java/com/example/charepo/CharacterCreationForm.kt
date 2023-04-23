@@ -12,8 +12,10 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.Switch
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -24,7 +26,7 @@ class CharacterCreationForm :AppCompatActivity() {
 
         val submitBtn = findViewById<Button>(R.id.submit_btn)
         val uploadBtn = findViewById<Button>(R.id.image_upload_btn)
-//        val uploadHolder = findViewById<LinearLayout>(R.id.image_upload_holder)
+        val cancelBtn = findViewById<Button>(R.id.cancel_btn)
         val genderDropDown = findViewById<Spinner>(R.id.gender_dropdown)
         val dropDownAdapter = ArrayAdapter.createFromResource(this,R.array.genders,R.layout.spinner_item)
         dropDownAdapter.setDropDownViewResource(R.layout.spinner_item)
@@ -51,16 +53,14 @@ class CharacterCreationForm :AppCompatActivity() {
                 contentResolver.takePersistableUriPermission(uri,
                     Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-//                val imageView = ImageView(this)
-//                imageView.setImageURI(uri)
-//                imageView.adjustViewBounds = true
-//                imageView.setPadding(0,0,5,0)
-//                uploadHolder.addView(imageView)
-
                 imageList.add(uri)
                 imageRVAdapter.notifyDataSetChanged()
 
             }
+        }
+
+        cancelBtn.setOnClickListener {
+            this.finish()
         }
 
         uploadBtn.setOnClickListener {
@@ -72,7 +72,7 @@ class CharacterCreationForm :AppCompatActivity() {
         submitBtn.setOnClickListener {
             val charName = nameInput.text.toString()
             val charBirthday = birthdayInput.text.toString()
-            val charGender = genderDropDown.selectedItem.toString()
+            var charGender = genderDropDown.selectedItem.toString()
             val charRace = raceInput.text.toString()
             val charDescription = descriptionInput.text.toString()
             val charImages = imageList
@@ -83,19 +83,26 @@ class CharacterCreationForm :AppCompatActivity() {
             }else{
                 isPublic = 0
             }
+            if(charGender == "Pick Gender"){
+                charGender = ""
+            }
 
-           val newCharacter = HomeRecyclerViewItem.CharacterItem(
-               name = charName,
-               birthday = charBirthday,
-               gender = charGender,
-               race = charRace,
-               characterDescription = charDescription,
-               characterImages = charImages,
-               isPublic = isPublic,
-               directory = DirectoryHandler.currentDirectory)
-            Fetcher.itemList.add(newCharacter)
-            Fetcher.updateAdapter()
-            this.finish()
+            if (charName == ""){
+                Toast.makeText(this,"Character Name Not Provided", Toast.LENGTH_LONG).show()
+            }else{
+                val newCharacter = HomeRecyclerViewItem.CharacterItem(
+                    name = charName,
+                    birthday = charBirthday,
+                    gender = charGender,
+                    race = charRace,
+                    characterDescription = charDescription,
+                    characterImages = charImages,
+                    isPublic = isPublic,
+                    directory = DirectoryHandler.currentDirectory)
+                Fetcher.itemList.add(newCharacter)
+                Fetcher.updateAdapter()
+                this.finish()
+            }
         }
     }
 

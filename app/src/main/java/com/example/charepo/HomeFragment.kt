@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
     lateinit var backButton: Button
+    lateinit var directoryHeader: TextView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,12 +30,13 @@ class HomeFragment : Fragment() {
         //Add the temporary items to the recycler vies
         var itemList = Fetcher.getEmails()
 
+         directoryHeader = view.findViewById(R.id.directoryHeader)
         val addFolderButton = view.findViewById<ImageButton>(R.id.add_folder_btn)
         val addCharacterButton = view.findViewById<ImageButton>(R.id.add_character_btn)
         val adapter = Fetcher.initializeAdapter(view.context,itemList,this)
         recyclerViewItem.adapter = adapter
         recyclerViewItem.layoutManager = GridLayoutManager(this.context,2)
-
+        directoryHeader.text = "Home"
 
         addFolderButton.setOnClickListener {
             createNewFolder(view.context)
@@ -88,6 +91,7 @@ class HomeFragment : Fragment() {
             backButton.visibility = View.INVISIBLE
         }else{
             backButton.visibility = View.VISIBLE
+            directoryHeader.text = DirectoryHandler.currentDirectory
         }
     }
 }
