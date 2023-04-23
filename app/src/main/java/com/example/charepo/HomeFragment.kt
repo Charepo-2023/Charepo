@@ -4,12 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -30,21 +28,35 @@ class HomeFragment : Fragment() {
         //Add the temporary items to the recycler vies
         var itemList = Fetcher.getEmails()
 
-         directoryHeader = view.findViewById(R.id.directoryHeader)
-        val addFolderButton = view.findViewById<ImageButton>(R.id.add_folder_btn)
-        val addCharacterButton = view.findViewById<ImageButton>(R.id.add_character_btn)
+        directoryHeader = view.findViewById(R.id.directoryHeader)
+
+        val addButton = view.findViewById<Button>(R.id.add_button)
         val adapter = Fetcher.initializeAdapter(view.context,itemList,this)
         recyclerViewItem.adapter = adapter
         recyclerViewItem.layoutManager = GridLayoutManager(this.context,2)
         directoryHeader.text = "Home"
 
-        addFolderButton.setOnClickListener {
-            createNewFolder(view.context)
-        }
 
-        addCharacterButton.setOnClickListener{
-            val intent = Intent(view.context, CharacterCreationForm::class.java)
-            view.context.startActivity(intent)
+        //When add button clicked, dropdown menu shows and can pick either new folder or character
+        addButton.setOnClickListener {
+            val popupMenu = PopupMenu(it.context, it)
+            popupMenu.inflate(R.menu.add_item_menu)
+            popupMenu.setOnMenuItemClickListener { menuItem: MenuItem? ->
+                when (menuItem!!.itemId) {
+                    R.id.add_character_option -> {
+                        val intent = Intent(view.context, CharacterCreationForm::class.java)
+                        view.context.startActivity(intent)
+
+                    }
+                    R.id.add_folder_option -> {
+                        createNewFolder(view.context)
+
+                    }
+                }
+                true
+            }
+            popupMenu.show()
+            true
         }
 
         //Code for the back button, needs to be double clicked at the moment
@@ -55,7 +67,6 @@ class HomeFragment : Fragment() {
             Fetcher.updateAdapter()
 
         }
-
         return view
     }
 
@@ -85,10 +96,13 @@ class HomeFragment : Fragment() {
             show()
         }
     }
+
     //Checks if the directory is the root folder and hides the button when at the root directory
+    //Also changes the text that shows which directory you are in
     fun checkBtnVisibility(){
         if ( DirectoryHandler.currentDirectory == "root"){
             backButton.visibility = View.INVISIBLE
+            directoryHeader.text = "Home"
         }else{
             backButton.visibility = View.VISIBLE
             directoryHeader.text = DirectoryHandler.currentDirectory

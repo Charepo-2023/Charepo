@@ -5,9 +5,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+
         >
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -25,13 +28,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edit" />
+        <Button
+            android:id="@+id/edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/edit"
+            />
 
     <Switch
         android:id="@+id/public_switch"
@@ -74,14 +80,15 @@
             android:id="@+id/birthday_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="90dp"
+            android:layout_marginStart="88dp"
+
             android:text="Birthday: "
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageRV" />
+            app:layout_constraintTop_toBottomOf="@+id/barrier" />
 
-    <TextView
+        <TextView
         android:id="@+id/birthday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -146,7 +153,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/character_name"
-            tools:listitem="@layout/image_item" />
+            tools:listitem="@layout/image_item"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/default_image_view"
+            android:layout_width="250dp"
+            android:layout_height="220dp"
+            android:src="@drawable/default_character_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_name"
+
+            />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="319dp"
+            app:constraint_referenced_ids="default_image_view,imageRV"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 

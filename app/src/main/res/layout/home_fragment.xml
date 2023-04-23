@@ -12,29 +12,29 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_character_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/add_button" />
 
 
-    <ImageButton
-        android:id="@+id/add_folder_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:padding="5dp"
-        android:src="@drawable/create_folder"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/add_character_btn"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/add_folder_btn"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:padding="5dp"-->
+<!--        android:src="@drawable/create_folder"-->
+<!--        android:textSize="15sp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/add_character_btn"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <ImageButton
-        android:id="@+id/add_character_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:padding="5dp"
-        android:src="@drawable/add_character"
-        android:text=""
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/add_folder_btn" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/add_character_btn"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:padding="5dp"-->
+<!--        android:src="@drawable/add_character"-->
+<!--        android:text=""-->
+<!--        android:textSize="15sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/add_folder_btn" />-->
 
     <Button
         android:id="@+id/back_btn"
@@ -54,6 +54,15 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add.."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 

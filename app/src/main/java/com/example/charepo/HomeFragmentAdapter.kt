@@ -91,7 +91,12 @@ class RecyclerAdapter(
     internal inner class CharacterViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
         fun bind(item:HomeRecyclerViewItem.CharacterItem){
             itemView.findViewById<TextView>(R.id.characterName).text = item.name
-            itemView.findViewById<ImageView>(R.id.characterImage).setImageResource(R.drawable.default_character_icon)
+            if (item.characterImages!!.isEmpty()){
+                itemView.findViewById<ImageView>(R.id.characterImage).setImageResource(R.drawable.default_character_icon)
+            }else{
+                itemView.findViewById<ImageView>(R.id.characterImage).setImageURI(item.characterImages!![0])
+            }
+
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, CharacterDetail::class.java)

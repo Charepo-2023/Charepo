@@ -13,7 +13,7 @@ open class HomeRecyclerViewItem {
 
     data class CharacterItem (
         var name: String? = null,
-        var characterImages: ArrayList<Uri>? = null,
+        var characterImages: ArrayList<Uri>? = ArrayList(),
         var birthday : String? = null,
         var gender : String? = null,
         var race: String? = null,

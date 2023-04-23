@@ -8,6 +8,7 @@ class Fetcher {
             lateinit var recyclerAdapter: RecyclerAdapter
             val sortedList: MutableList<HomeRecyclerViewItem> = ArrayList()
             var currentCharacter : HomeRecyclerViewItem.CharacterItem? = null
+            var loadCharacter = false
 
 
         fun sortList(unsortedList: List<HomeRecyclerViewItem>) : List<HomeRecyclerViewItem>{
@@ -69,7 +70,13 @@ class Fetcher {
             return currentCharacter as HomeRecyclerViewItem.CharacterItem
         }
 
+        fun setLoadCharacterVal(boolean: Boolean){
+            loadCharacter = boolean
+        }
 
+        fun getLoadCharacterVal():Boolean{
+            return loadCharacter
+        }
 
             fun getEmails(): MutableList<HomeRecyclerViewItem>{
             val data : MutableList<HomeRecyclerViewItem> =ArrayList()

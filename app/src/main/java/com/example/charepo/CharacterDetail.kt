@@ -1,10 +1,13 @@
 package com.example.charepo
 
+import android.content.Intent
 import android.media.Image
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Switch
@@ -28,18 +31,16 @@ class CharacterDetail :AppCompatActivity() {
         val characterGenderView = findViewById<TextView>(R.id.gender)
         val characterRaceView = findViewById<TextView>(R.id.race)
         val publicSwitch = findViewById<Switch>(R.id.public_switch)
+        val editButton = findViewById<Button>(R.id.edit_button)
 
-//        val charName = intent.getStringExtra("Name")
-//        val charDescription = intent.getStringExtra("Description")
-//        val charBirthday = intent.getStringExtra("Birthday")
-//        val charGender = intent.getStringExtra("Gender")
-//        val charRace = intent.getStringExtra("Race")
-//        val isPublic = intent.getIntExtra("Public",0)
-//        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.TIRAMISU ) {
-//             charImages = (intent.getParcelableArrayListExtra("Images", ArrayList<Uri>()::class.java) as? ArrayList<Uri>)!!
-//        }else{
-//            charImages = intent.getParcelableArrayListExtra("Images")!!
-//        }
+        editButton.setOnClickListener {
+            Fetcher.setLoadCharacterVal(true)
+            val editCharacterForm = CharacterCreationForm()
+            val intent = Intent(it.context,editCharacterForm::class.java)
+            startActivity(intent)
+        }
+
+//
         val charName = character.name.toString()
         val charDescription = character.characterDescription.toString()
         val charBirthday = character.birthday.toString()
@@ -58,10 +59,21 @@ class CharacterDetail :AppCompatActivity() {
         characterGenderView.text = charGender
         characterRaceView.text = charRace
 
+
+        val defaultImageView = findViewById<ImageView>(R.id.default_image_view)
         val imageRecyclerView = findViewById<RecyclerView>(R.id.imageRV)
-        val imageAdapter = CharacterDetailAdapter(this,charImages)
-        imageRecyclerView.adapter = imageAdapter
-        imageRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+
+        if (charImages.isEmpty()){
+            imageRecyclerView.visibility = View.GONE
+            defaultImageView.visibility = View.VISIBLE
+        }else{
+            imageRecyclerView.visibility = View.VISIBLE
+            defaultImageView.visibility = View.GONE
+            val imageAdapter = CharacterDetailAdapter(this,charImages)
+            imageRecyclerView.adapter = imageAdapter
+            imageRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        }
+
 
     }
 
