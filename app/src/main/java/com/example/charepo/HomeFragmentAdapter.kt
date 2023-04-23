@@ -103,6 +103,23 @@ class RecyclerAdapter(
                 Fetcher.setCurrentCharacterVal(item)
                 itemView.context.startActivity(intent)
             }
+
+            itemView.setOnLongClickListener {
+                val popupMenu = PopupMenu(it.context, it)
+                popupMenu.inflate(R.menu.long_press_menu)
+                popupMenu.menu.removeItem(R.id.modify_option)
+                popupMenu.setOnMenuItemClickListener { menuItem: MenuItem? ->
+                    when (menuItem!!.itemId) {
+                        R.id.delete_option -> {
+                            Fetcher.itemList.remove(item)
+                            Fetcher.updateAdapter()
+                        }
+                    }
+                    true
+                }
+                popupMenu.show()
+                true
+            }
         }
     }
 
