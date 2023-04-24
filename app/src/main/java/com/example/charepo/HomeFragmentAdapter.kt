@@ -18,7 +18,6 @@ class RecyclerAdapter(
     val context: Context,
     val items: List<HomeRecyclerViewItem>,
     val homeFragment: HomeFragment): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
     val sortedList = Fetcher.sortList(items)
 
     override fun getItemViewType(position: Int): Int {
