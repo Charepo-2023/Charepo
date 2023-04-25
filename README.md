@@ -118,9 +118,9 @@ Change the folder system so it is not accessing the phone's actual folders. Just
 Add folder, modfiy folder, and delete folder functionality implemented. 
 
 <img src = "https://i.imgur.com/ettryRE.gif" height=350>
-
-<img src="https://i.ibb.co/tM7wbvT/Registration-Functionality-Test.gif" alt="Registration-Functionality-Test" height=350>
 Register a user
-
+<img src="https://i.ibb.co/tM7wbvT/Registration-Functionality-Test.gif" alt="Registration-Functionality-Test" height=350>
+Character Creation and Modification
+<img src="https://i.imgur.com/UwWboNA.gif" alt="Character Creation and Modification" height=350>
 
 
