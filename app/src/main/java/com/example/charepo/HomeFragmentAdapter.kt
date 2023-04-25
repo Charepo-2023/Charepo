@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 const val VIEW_TYPE_FOLDER = 1
 const val VIEW_TYPE_CHARACTER = 2
@@ -93,7 +94,10 @@ class RecyclerAdapter(
             if (item.characterImages!!.isEmpty()){
                 itemView.findViewById<ImageView>(R.id.characterImage).setImageResource(R.drawable.default_character_icon)
             }else{
-                itemView.findViewById<ImageView>(R.id.characterImage).setImageURI(item.characterImages!![0])
+                Glide.with(itemView.context)
+                    .load(item.characterImages!![0])
+                    .into(itemView.findViewById(R.id.characterImage))
+               // itemView.findViewById<ImageView>(R.id.characterImage).setImageURI(item.characterImages!![0])
             }
 
 

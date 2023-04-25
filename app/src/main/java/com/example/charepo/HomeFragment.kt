@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.PopupMenu
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -46,7 +49,6 @@ class HomeFragment : Fragment() {
                     R.id.add_character_option -> {
                         val intent = Intent(view.context, CharacterCreationForm::class.java)
                         view.context.startActivity(intent)
-
                     }
                     R.id.add_folder_option -> {
                         createNewFolder(view.context)
@@ -108,4 +110,8 @@ class HomeFragment : Fragment() {
             directoryHeader.text = DirectoryHandler.currentDirectory
         }
     }
+
+    /* Intent.FLAG_ACTIVITY_CLEAR_TOP|
+    Intent.FLAG_ACTIVITY_CLEAR_TASK |
+    Intent.FLAG_ACTIVITY_NEW_TASK */
 }

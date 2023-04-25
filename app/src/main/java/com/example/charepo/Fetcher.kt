@@ -1,6 +1,8 @@
 package com.example.charepo
 
 import android.content.Context
+import android.net.Uri
+import java.net.URL
 
 class Fetcher {
     companion object{
@@ -28,24 +30,36 @@ class Fetcher {
             sortedList.sortWith((compareByDescending<HomeRecyclerViewItem> { it.javaClass.name.lowercase() }.thenBy{ it.toString().lowercase() }))
             return sortedList
         }
+        fun sortCharacters(unsortedList: List<HomeRecyclerViewItem>):List<HomeRecyclerViewItem>{
+            sortedList.clear()
+            for(i in unsortedList) {
+                if(i is HomeRecyclerViewItem.CharacterItem){
+                    if (i.isPublic == 1){
+                        sortedList.add(i)
+                    }
+                }
+            }
+            sortedList.sortWith((compareByDescending<HomeRecyclerViewItem> { it.javaClass.name.lowercase() }.thenBy{ it.toString().lowercase() }))
+            return sortedList
+        }
 
 
-            fun getRecyclerList(): MutableList<HomeRecyclerViewItem>{
+        fun getRecyclerList(): MutableList<HomeRecyclerViewItem>{
                 return itemList
             }
 
-            fun initializeAdapter(givenContext: Context, list:MutableList<HomeRecyclerViewItem>, homeFragment: HomeFragment): RecyclerAdapter{
+        fun initializeAdapter(givenContext: Context, list:MutableList<HomeRecyclerViewItem>, homeFragment: HomeFragment): RecyclerAdapter{
                 recyclerAdapter = RecyclerAdapter(givenContext,list,homeFragment)
                 itemList = list
                 return recyclerAdapter
             }
 
-            fun updateAdapter(){
+        fun updateAdapter(){
                 sortList(itemList)
                 recyclerAdapter.notifyDataSetChanged()
             }
 
-            fun updateFolderName(oldName:String, newName:String, changingItem: HomeRecyclerViewItem){
+        fun updateFolderName(oldName:String, newName:String, changingItem: HomeRecyclerViewItem){
                 for (i in itemList){
                     if(i is HomeRecyclerViewItem.CharacterItem){
                         if (i.directory == oldName){
@@ -78,12 +92,19 @@ class Fetcher {
             return loadCharacter
         }
 
-            fun getEmails(): MutableList<HomeRecyclerViewItem>{
+        fun getEmails(): MutableList<HomeRecyclerViewItem>{
+            val charImages : ArrayList<Uri> = ArrayList()
+            val url = URL("https://i.imgur.com/Oc9ACvH.png")
+            charImages.add(Uri.parse(url.toURI().toString()))
+            charImages.add(Uri.parse(url.toURI().toString()))
             val data : MutableList<HomeRecyclerViewItem> =ArrayList()
-            data.add(HomeRecyclerViewItem.CharacterItem("James", directory = "Home", characterDescription = "This is James"))
+            data.add(HomeRecyclerViewItem.CharacterItem("James", directory = "root",
+                characterDescription = "This is James",
+                isPublic = 1, characterImages = charImages))
             data.add(HomeRecyclerViewItem.FolderItem("Women", directory = "root"))
             data.add(HomeRecyclerViewItem.FolderItem("Book 1", directory = "root"))
-            data.add(HomeRecyclerViewItem.CharacterItem("Charlie", directory = "root", characterDescription = "Charlie Bucket is the main protagonist of the 1964 Roald Dahl book Charlie and the Chocolate Factory and the 1971 and 2005 film adaptations of the book. Despite being a stereotypical boy, Charlie is a noble, caring hero and one of the best in British literature.",
+            data.add(HomeRecyclerViewItem.CharacterItem("Charlie", directory = "root",
+                characterDescription = "Charlie Bucket is the main protagonist of the 1964 Roald Dahl book Charlie and the Chocolate Factory and the 1971 and 2005 film adaptations of the book. Despite being a stereotypical boy, Charlie is a noble, caring hero and one of the best in British literature.",
                 isPublic = 1,
                 birthday = "April 15, 1987",
                 race = "White",
@@ -91,7 +112,10 @@ class Fetcher {
             data.add(HomeRecyclerViewItem.FolderItem("Book 6", directory = "root"))
             data.add(HomeRecyclerViewItem.FolderItem("Blue","Book 1"))
             data.add(HomeRecyclerViewItem.FolderItem("Red","Book 1"))
-            data.add(HomeRecyclerViewItem.CharacterItem("Pete", characterDescription = "Pete lives in the forest and tracks animals.", directory = "Book 1", isPublic = 0))
+            data.add(HomeRecyclerViewItem.CharacterItem("Pete",
+                characterDescription = "Pete lives in the forest and tracks animals.",
+                directory = "Book 1",
+                isPublic = 0))
             return data
         }
 

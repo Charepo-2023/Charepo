@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class CharacterDetailAdapter(val context: Context,
                              val imageList: ArrayList<Uri>,
@@ -29,7 +30,10 @@ class CharacterDetailAdapter(val context: Context,
         val imageView = itemView.findViewById<ImageView>(R.id.character_image_holder)
 
         fun bind(image: Uri){
-            imageView.setImageURI(image)
+            //imageView.setImageURI(image)
+            Glide.with(itemView.context)
+                .load(image)
+                .into(imageView)
         }
     }
 
