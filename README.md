@@ -124,7 +124,7 @@ Character Creation and Modification
 <img src="https://i.imgur.com/UwWboNA.gif" alt="Character Creation and Modification" height=350>
 Register, login, and general use.
 
-<img src="https://i.imgur.com/KePByaJ.gif" alt="Register & login" height=300><img src="https://i.imgur.com/RTQ2x1V.gif" alt="Explore and character/folder creation" height=300>
+<img src="https://i.imgur.com/KePByaJ.gif" alt="Register & login" height=350><img src="https://i.imgur.com/RTQ2x1V.gif" alt="Explore and character/folder creation" height=350>
 
 
 
