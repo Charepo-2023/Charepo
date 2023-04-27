@@ -13,7 +13,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/cream">
 
         <TextView
             android:id="@+id/character_name"
@@ -37,6 +38,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/edit"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:textAllCaps="false"
             />
 
     <Switch
@@ -48,7 +53,8 @@
         android:text="Make Public"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/orange"/>
 
     <TextView
         android:id="@+id/description_label"
