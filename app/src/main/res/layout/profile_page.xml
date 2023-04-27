@@ -49,7 +49,7 @@
         android:layout_marginBottom="117dp"
         android:backgroundTint="#C0C0C0"
         android:text="logout"
-        android:textsize="100dp"
+        android:textSize="100dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
