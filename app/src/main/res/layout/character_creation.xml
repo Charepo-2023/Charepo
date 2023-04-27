@@ -54,12 +54,15 @@
             android:id="@+id/image_upload_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Images "
+            android:text="Add Images"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/imageRV"
             app:layout_constraintStart_toStartOf="@+id/imageRV"
             app:layout_constraintTop_toBottomOf="@+id/imageRV"
             android:backgroundTint="@color/orange"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:textAllCaps="false"
 
             />
 
@@ -87,6 +90,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/public_switch"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:textAllCaps="false"
              />
 
         <Button
@@ -100,6 +107,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/public_switch"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:textAllCaps="false"
              />
 
         <Spinner
