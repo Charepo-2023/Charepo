@@ -1,8 +1,11 @@
 package com.example.charepo
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -11,6 +14,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.PopupMenu
 import android.widget.TextView
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -19,17 +24,20 @@ import androidx.recyclerview.widget.RecyclerView
 class HomeFragment : Fragment() {
     lateinit var backButton: Button
     lateinit var directoryHeader: TextView
+    var uri: Uri? = null
+    lateinit var resultLauncher: ActivityResultLauncher<Intent>
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
+
         val view = inflater.inflate(R.layout.home_fragment,container,false)
         val recyclerViewItem = view.findViewById<RecyclerView>(R.id.homeRV)
 
         //Add the temporary items to the recycler vies
-        var itemList = Fetcher.getEmails()
+        var itemList = Fetcher.itemList
 
         directoryHeader = view.findViewById(R.id.directoryHeader)
 
@@ -39,6 +47,18 @@ class HomeFragment : Fragment() {
         recyclerViewItem.layoutManager = GridLayoutManager(this.context,2)
         directoryHeader.text = "Home"
 
+
+         resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                //get uri
+                uri = result.data?.data as Uri
+                //get permission to use uri throughout app
+                requireActivity().contentResolver.takePersistableUriPermission(
+                    uri!!,
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION
+                )
+            }
+        }
 
         //When add button clicked, dropdown menu shows and can pick either new folder or character
         addButton.setOnClickListener {
@@ -79,6 +99,14 @@ class HomeFragment : Fragment() {
         val inflater = layoutInflater
         val dialogLayout = inflater.inflate(R.layout.folder_creation,null)
         val folderName = dialogLayout.findViewById<EditText>(R.id.folderNameInput)
+        val uploadBtn = dialogLayout.findViewById<Button>(R.id.image_upload_btn)
+
+        uploadBtn.setOnClickListener {
+            val uploadIntent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            uploadIntent.data = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+            resultLauncher.launch(uploadIntent)
+        }
+
 
         with(builder) {
             setTitle("Enter new folder name: ")
@@ -87,7 +115,8 @@ class HomeFragment : Fragment() {
                     HomeRecyclerViewItem.FolderItem(
                         folderName.text.toString(),
                         DirectoryHandler.currentDirectory,
-                        null
+                        icon=uri,
+                        owner = LoginTracker.getCurrentUserName()
                     )
                 )
                 Fetcher.updateAdapter()
@@ -111,7 +140,5 @@ class HomeFragment : Fragment() {
         }
     }
 
-    /* Intent.FLAG_ACTIVITY_CLEAR_TOP|
-    Intent.FLAG_ACTIVITY_CLEAR_TASK |
-    Intent.FLAG_ACTIVITY_NEW_TASK */
+
 }

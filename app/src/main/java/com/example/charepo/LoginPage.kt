@@ -2,6 +2,7 @@ package com.example.charepo
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -14,18 +15,23 @@ class LoginPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.loginpage)
 
-        var emailInput = findViewById<EditText>(R.id.email).text
-        var emailInput2 = emailInput.toString()
-        var password = findViewById<EditText>(R.id.password).text
-        var password2 = password.toString()
         var btn = findViewById<Button>(R.id.button)
 
         btn.setOnClickListener {
+            var username = findViewById<EditText>(R.id.username).text.toString()
+            var password = findViewById<EditText>(R.id.password).text.toString()
             db = DBHelper(this)
-            if(db.checkUserPassword(emailInput2,password2))
+            if(db.checkUserPassword(username,password))
             {
+                LoginTracker.setCurrentUserName(username)
+                LoginTracker.setUserLoggedInVal(true)
                 Toast.makeText(applicationContext, "Logged In", Toast.LENGTH_SHORT).show()
-                val intent = Intent(applicationContext,MainActivity::class.java)
+                val intent = Intent(this,MainActivity::class.java)
+                intent.addFlags(
+                    Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK or
+                            Intent.FLAG_ACTIVITY_NEW_TASK
+                )
                 startActivity(intent)
             }
             else

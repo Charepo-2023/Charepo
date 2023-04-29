@@ -8,7 +8,8 @@ open class HomeRecyclerViewItem {
     data class FolderItem (
         var name: String? = null,
         var directory: String? = null,
-        var icon: Icon? = null
+        var owner: String? = null,
+        var icon: Uri? = null
     ) : HomeRecyclerViewItem()
 
     data class CharacterItem (
@@ -18,6 +19,7 @@ open class HomeRecyclerViewItem {
         var gender : String? = null,
         var race: String? = null,
         var characterDescription: String? = null,
+        var owner:String? = null,
         var isPublic : Int? = 0,
         var directory: String? = null
     ) : HomeRecyclerViewItem()

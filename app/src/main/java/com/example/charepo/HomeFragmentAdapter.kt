@@ -57,7 +57,14 @@ class RecyclerAdapter(
     internal inner class FolderViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
         fun bind(item:HomeRecyclerViewItem.FolderItem){
             itemView.findViewById<TextView>(R.id.folderName).text = item.name
-            itemView.findViewById<ImageView>(R.id.folderIcon).setImageResource(R.drawable.folder)
+            if (item.icon == null){
+                itemView.findViewById<ImageView>(R.id.folderIcon).setImageResource(R.drawable.folder)
+            }else{
+                Glide.with(itemView.context)
+                    .load(item.icon)
+                    .into(itemView.findViewById(R.id.folderIcon))
+            }
+
 
             //Change the directory when folder clicked
             itemView.setOnClickListener {

@@ -17,22 +17,21 @@ class RegistrationPage : AppCompatActivity() {
 
         db = DBHelper(this)
 
-        var email = findViewById<EditText>(R.id.emailInput).text
-        var email2 = email.toString()
-        val password = findViewById<EditText>(R.id.passwordInput).text
-        val password2 = password.toString()
-        val confirmPassword = findViewById<EditText>(R.id.confirmPasswordInput).text
-        val confirmPassword2 = confirmPassword.toString()
+
         val btn = findViewById<Button>(R.id.registerBtn)
 
         btn.setOnClickListener {
-            if(password2.compareTo(confirmPassword2) == 0)
+            var userName = findViewById<EditText>(R.id.userNameInput).text.toString()
+            val password = findViewById<EditText>(R.id.passwordInput).text.toString()
+            val confirmPassword = findViewById<EditText>(R.id.confirmPasswordInput).text.toString()
+
+            if(password.compareTo(confirmPassword) == 0)
             {
-                db.insertdate(email2,password2)
+                db.insertdate(userName,password)
                 Toast.makeText(applicationContext, "Logged In",Toast.LENGTH_SHORT).show()
                 Toast.makeText(applicationContext, password,Toast.LENGTH_SHORT).show()
                 Toast.makeText(applicationContext, confirmPassword,Toast.LENGTH_SHORT).show()
-
+                this.finish()
             }
             else
             {

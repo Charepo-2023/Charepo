@@ -139,6 +139,7 @@ class CharacterCreationForm :AppCompatActivity() {
                     race = charRace,
                     characterDescription = charDescription,
                     characterImages = charImages,
+                    owner = LoginTracker.getCurrentUserName(),
                     isPublic = isPublic,
                     directory = DirectoryHandler.currentDirectory)
                 Fetcher.itemList.add(newCharacter)

@@ -19,6 +19,12 @@
             android:name=".CharacterCreationForm"
             android:exported="true"/>
         <activity
+            android:name=".LoginPage"
+            android:exported="true"/>
+        <activity
+            android:name=".RegistrationPage"
+            android:exported="true"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

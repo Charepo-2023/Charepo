@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class ExploreFragmentAdapter(
     val context: Context,
@@ -45,12 +46,15 @@ class ExploreFragmentAdapter(
     internal inner class CharacterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bind(item:HomeRecyclerViewItem.CharacterItem){
             itemView.findViewById<TextView>(R.id.charNameView).text = item.name
+            itemView.findViewById<TextView>(R.id.ownerNameView).text = "Created By: " + item.owner
+
             if (item.characterImages!!.isEmpty()){
                 itemView.findViewById<ImageView>(R.id.charImageView).setImageResource(R.drawable.default_character_icon)
-            }else{
-                itemView.findViewById<ImageView>(R.id.charImageView).setImageURI(item.characterImages!![0])
+            }else {
+                Glide.with(itemView.context)
+                    .load(item.characterImages!![0])
+                    .into(itemView.findViewById(R.id.charImageView))
             }
-
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, CharacterDetail::class.java)
                 Fetcher.setCurrentCharacterVal(item)
