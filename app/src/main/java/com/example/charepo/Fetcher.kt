@@ -143,8 +143,7 @@ class Fetcher {
             val charlieImage : ArrayList<Uri> = ArrayList()
             charlieImage.add(Uri.parse("https://i.imgur.com/FsQLlD0.png".toUri().toString()))
             charlieImage.add(Uri.parse("https://i.imgur.com/cZvZ1Le.png".toUri().toString()))
-            val url = URL("https://i.imgur.com/Oc9ACvH.png")
-            charImages.add(Uri.parse(url.toURI().toString()))
+            val url = URL("https://i.imgur.com/iy7mQPY.png")
             charImages.add(Uri.parse(url.toURI().toString()))
             itemList.add(HomeRecyclerViewItem.CharacterItem("James", directory = "root",
                 characterDescription = "This is James",
