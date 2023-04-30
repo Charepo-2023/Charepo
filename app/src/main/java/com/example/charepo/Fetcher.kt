@@ -47,8 +47,24 @@ class Fetcher {
                     }
                 }
             }
+            searchList.sortWith((compareByDescending<HomeRecyclerViewItem> { it.javaClass.name.lowercase() }.thenBy{ it.toString().lowercase() }))
             recyclerAdapter.sortedList = searchList
             recyclerAdapter.notifyDataSetChanged()
+        }
+
+        fun searchExploreList(keyword: String, adapter: ExploreFragmentAdapter){
+            val searchList : MutableList<HomeRecyclerViewItem> = ArrayList()
+            for (i in sortedList){
+                if (i is HomeRecyclerViewItem.CharacterItem && i.isPublic == 1){
+                    if (i.name.toString().lowercase().contains(keyword.lowercase()) ||
+                        i.owner.toString().lowercase().contains(keyword.lowercase())){
+                        searchList.add(i)
+                    }
+                }
+            }
+            searchList.sortWith((compareByDescending<HomeRecyclerViewItem> { it.javaClass.name.lowercase() }.thenBy{ it.toString().lowercase() }))
+            adapter.sortedList = searchList
+            adapter.notifyDataSetChanged()
         }
         fun sortCharacters(unsortedList: List<HomeRecyclerViewItem>):List<HomeRecyclerViewItem>{
             sortedList.clear()

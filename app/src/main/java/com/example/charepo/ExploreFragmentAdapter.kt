@@ -15,7 +15,7 @@ import com.bumptech.glide.Glide
 class ExploreFragmentAdapter(
     val context: Context,
     val items: List<HomeRecyclerViewItem> ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    val sortedList = Fetcher.sortCharacters(items)
+    var sortedList = Fetcher.sortCharacters(items)
 
     override fun getItemViewType(position: Int): Int {
         if (sortedList[position] is HomeRecyclerViewItem.FolderItem){
