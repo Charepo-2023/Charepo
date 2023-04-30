@@ -3,9 +3,11 @@ package com.example.charepo
 import android.content.Context
 import android.net.Uri
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -34,6 +36,24 @@ class CharacterDetailAdapter(val context: Context,
             Glide.with(itemView.context)
                 .load(image)
                 .into(imageView)
+
+            imageView.setOnLongClickListener {
+                val popupMenu = PopupMenu(it.context, it)
+                popupMenu.inflate(R.menu.long_press_menu)
+                popupMenu.menu.removeItem(R.id.modify_option)
+                popupMenu.setOnMenuItemClickListener { menuItem: MenuItem? ->
+                    when (menuItem!!.itemId) {
+                        R.id.delete_option -> {
+                            imageList.remove(image)
+                            notifyDataSetChanged()
+                        }
+                    }
+                    true
+                }
+                popupMenu.show()
+                true
+            }
+
         }
     }
 

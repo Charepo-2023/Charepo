@@ -56,7 +56,7 @@ class ExploreFragmentAdapter(
                     .into(itemView.findViewById(R.id.charImageView))
             }
             itemView.setOnClickListener {
-                val intent = Intent(itemView.context, CharacterDetail::class.java)
+                val intent = Intent(itemView.context, CharacterDetailPublic::class.java)
                 Fetcher.setCurrentCharacterVal(item)
                 itemView.context.startActivity(intent)
             }

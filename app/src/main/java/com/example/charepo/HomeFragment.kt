@@ -6,17 +6,17 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.PopupMenu
-import android.widget.TextView
+import android.widget.*
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -47,16 +47,40 @@ class HomeFragment : Fragment() {
         recyclerViewItem.layoutManager = GridLayoutManager(this.context,2)
         directoryHeader.text = "Home"
 
+        val searchInput = view.findViewById<EditText>(R.id.searchInput)
+
+
+        searchInput.addTextChangedListener (object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (searchInput.text.isEmpty()){
+                    Fetcher.updateAdapter()
+                }else{
+                    Fetcher.searchList(s.toString())
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+        })
+
+
 
          resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 //get uri
                 uri = result.data?.data as Uri
+
                 //get permission to use uri throughout app
                 requireActivity().contentResolver.takePersistableUriPermission(
                     uri!!,
                     Intent.FLAG_GRANT_READ_URI_PERMISSION
                 )
+
             }
         }
 
@@ -140,5 +164,12 @@ class HomeFragment : Fragment() {
         }
     }
 
+    fun updateFolderIcon():Uri?{
+        val uploadIntent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        uploadIntent.data = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        resultLauncher.launch(uploadIntent)
+
+        return uri
+    }
 
 }

@@ -33,5 +33,11 @@ open class HomeRecyclerViewItem {
         }
     }
 
+    fun setIcon(item: HomeRecyclerViewItem, newIcon:Uri){
+        if(item is FolderItem){
+            item.icon = newIcon
+        }
+    }
+
 
 }

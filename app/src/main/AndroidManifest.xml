@@ -16,6 +16,9 @@
             android:name=".CharacterDetail"
             android:exported="true"/>
         <activity
+            android:name=".CharacterDetailPublic"
+            android:exported="true"/>
+        <activity
             android:name=".CharacterCreationForm"
             android:exported="true"/>
         <activity
