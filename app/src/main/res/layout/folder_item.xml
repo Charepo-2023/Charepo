@@ -15,10 +15,11 @@
 
     <TextView
         android:id="@+id/folderName"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="25sp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/folderIcon"
         app:layout_constraintStart_toStartOf="@+id/folderIcon"
         app:layout_constraintTop_toBottomOf="@+id/folderIcon" />

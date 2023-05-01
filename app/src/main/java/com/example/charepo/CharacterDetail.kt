@@ -49,6 +49,7 @@ class CharacterDetail :AppCompatActivity() {
         val isPublic = character.isPublic
         val charImages = character.characterImages as ArrayList<Uri>
 
+
         if(isPublic == 1){
             publicSwitch.isChecked = true
         }
