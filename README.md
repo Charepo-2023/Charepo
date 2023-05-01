@@ -30,7 +30,7 @@ A moblie app that allows users to store their character information in an easliy
  * Create folders to have better organization [✔️]
  * Store the character information to a database [In Progress]
  * User Profile [In Progress]
- * Search Feature [In Progress]
+ * Search Feature [✔️]
  * Share character information [✔️]
  * Nice app design [In Progress]
 
