@@ -133,6 +133,6 @@ Register, login, and general use.
 
 ## Final APP Walkthrough
 
-(https://youtu.be/ypbg91Rq9ts)
+https://youtu.be/ypbg91Rq9ts
 
 
