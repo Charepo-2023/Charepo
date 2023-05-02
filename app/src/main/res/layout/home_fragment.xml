@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color">
 
 
     <!--    <ImageButton-->
@@ -31,6 +32,8 @@
         android:id="@+id/homeRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -56,6 +59,9 @@
         android:textAlignment="center"
         android:textSize="40sp"
         android:textStyle="bold"
+        android:fontFamily="@font/crimson_text_regular"
+        android:textFontWeight="650"
+        android:textColor="@color/text_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -74,7 +80,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="@null"
+        android:background="@color/background_tint"
         android:drawableStart="@drawable/searchicon"
         android:ems="10"
         android:drawablePadding="5dp"
@@ -89,6 +95,9 @@
         android:id="@+id/btmNavBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        app:itemIconTint="@color/background_color"
+        app:itemTextColor="@color/background_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -28,9 +28,9 @@ class RegistrationPage : AppCompatActivity() {
             if(password.compareTo(confirmPassword) == 0)
             {
                 db.insertdate(userName,password)
-                Toast.makeText(applicationContext, "Logged In",Toast.LENGTH_SHORT).show()
-                Toast.makeText(applicationContext, password,Toast.LENGTH_SHORT).show()
-                Toast.makeText(applicationContext, confirmPassword,Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Account Created",Toast.LENGTH_SHORT).show()
+//                Toast.makeText(applicationContext, password,Toast.LENGTH_SHORT).show()
+//                Toast.makeText(applicationContext, confirmPassword,Toast.LENGTH_SHORT).show()
                 this.finish()
             }
             else

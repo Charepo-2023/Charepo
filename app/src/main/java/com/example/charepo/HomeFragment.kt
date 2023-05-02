@@ -144,6 +144,7 @@ class HomeFragment : Fragment() {
                     )
                 )
                 Fetcher.updateAdapter()
+                uri = null
             }
             setNegativeButton("Cancel") { dialog, which ->
             }

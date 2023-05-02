@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="25sp"
+        android:textColor="@color/text_dark"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/characterImage"
         app:layout_constraintStart_toStartOf="@+id/characterImage"
