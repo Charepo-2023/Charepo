@@ -132,7 +132,7 @@ Register, login, and general use.
 <img src="https://i.imgur.com/f3tpQK0.gif" alt="Register & login" height=350>       <img src="https://i.imgur.com/iTflnb7.gif" alt="Register & login" height=350>
 
 ## Final APP Walkthrough
+[![Charepo Demo](https://i.imgur.com/CLuR3bu.png)](https://youtu.be/ypbg91Rq9ts "Charepo Demo")
 
-https://youtu.be/ypbg91Rq9ts
 
 
