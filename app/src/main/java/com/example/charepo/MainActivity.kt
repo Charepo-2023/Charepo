@@ -19,7 +19,10 @@ class MainActivity : AppCompatActivity() {
             val exploreFragment : Fragment = ExploreFragment()
             val profileFragment : Fragment = ProfileFragment()
 
-            Fetcher.itemList = Fetcher.getItems()
+            if(Fetcher.itemList.isEmpty()){
+                Fetcher.itemList = Fetcher.getItems()
+            }
+
 
             val navagationBar = findViewById<BottomNavigationView>(R.id.btmNavBar)
             navagationBar.setOnItemSelectedListener { item ->

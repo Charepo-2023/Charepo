@@ -46,6 +46,7 @@ class HomeFragment : Fragment() {
         recyclerViewItem.adapter = adapter
         recyclerViewItem.layoutManager = GridLayoutManager(this.context,2)
         directoryHeader.text = "Home"
+        DirectoryHandler.setDirectory("root")
 
         val searchInput = view.findViewById<EditText>(R.id.searchInput)
 

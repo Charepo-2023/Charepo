@@ -54,7 +54,8 @@ class Fetcher {
 
         fun searchExploreList(keyword: String, adapter: ExploreFragmentAdapter){
             val searchList : MutableList<HomeRecyclerViewItem> = ArrayList()
-            for (i in sortedList){
+            val listToSearch = sortedList
+            for (i in listToSearch){
                 if (i is HomeRecyclerViewItem.CharacterItem && i.isPublic == 1){
                     if (i.name.toString().lowercase().contains(keyword.lowercase()) ||
                         i.owner.toString().lowercase().contains(keyword.lowercase())){
