@@ -4,6 +4,7 @@
 
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
+2. [App Walkthrough](#final-app-walkthrough)
 
 
 ## Overview
@@ -39,7 +40,7 @@ A moblie app that allows users to store their character information in an easliy
  * App customization 
  * Comment on characters
 
-## 2. Screen Archetypes
+### 2. Screen Archetypes
 
  - Login Screen
      - User can log into their account
@@ -90,7 +91,7 @@ A moblie app that allows users to store their character information in an easliy
 - Character Information
     - -> None
 
-## 5. Wireframes
+### 4. Wireframes
 <p float="left">
 <img src="https://i.imgur.com/1N8ZxOF.jpg" width=600>
  
@@ -105,7 +106,7 @@ A moblie app that allows users to store their character information in an easliy
 </p>
 
 
-## 6. Build Progress GIFs
+### 5. Build Progress GIFs
 Beginning Home Page Design 
 
 <img src="https://i.imgur.com/5AISljR.gif" height=350>
@@ -126,7 +127,7 @@ Register, login, and general use.
 
 <img src="https://i.imgur.com/KePByaJ.gif" alt="Register & login" height=350><img src="https://i.imgur.com/RTQ2x1V.gif" alt="Explore and character/folder creation" height=350>
 
-### Final APP Build GIFS
+## Final APP Build GIFS
 <img src="https://i.imgur.com/4OgWsxY.gif" alt="Register & login" height=350>      <img src="https://i.imgur.com/N1m5VQU.gif" alt="Register & login" height=350> 
 <img src="https://i.imgur.com/GBr6ZcI.gif" alt="Register & login" height=350>       <img src="https://i.imgur.com/zzGbK7G.gif" alt="Register & login" height=350> 
 <img src="https://i.imgur.com/f3tpQK0.gif" alt="Register & login" height=350>       <img src="https://i.imgur.com/iTflnb7.gif" alt="Register & login" height=350>
