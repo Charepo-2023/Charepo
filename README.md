@@ -91,7 +91,7 @@ A moblie app that allows users to store their character information in an easliy
 - Character Information
     - -> None
 
-## Wireframes
+## 5. Wireframes
 <p float="left">
 <img src="https://i.imgur.com/1N8ZxOF.jpg" width=600>
  
@@ -106,7 +106,7 @@ A moblie app that allows users to store their character information in an easliy
 </p>
 
 
-## Build Progress GIFs
+## 6. Build Progress GIFs
 Beginning Home Page Design 
 
 <img src="https://i.imgur.com/5AISljR.gif" height=350>
