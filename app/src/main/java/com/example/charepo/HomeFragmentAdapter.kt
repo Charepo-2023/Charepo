@@ -157,6 +157,7 @@ class RecyclerAdapter(
         val dialogLayout = LayoutInflater.from(context).inflate(R.layout.folder_creation,null)
         val folderNameInput = dialogLayout.findViewById<EditText>(R.id.folderNameInput)
         val uploadBtn = dialogLayout.findViewById<Button>(R.id.image_upload_btn)
+        uploadBtn.visibility = View.GONE
         folderNameInput.setText(folderItem.name)
 
 

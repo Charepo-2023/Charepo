@@ -31,7 +31,6 @@ class CharacterDetailPublic:AppCompatActivity() {
         editButton.visibility = View.GONE
 
 
-//
         val charName = character.name.toString()
         val charDescription = character.characterDescription.toString()
         val charBirthday = character.birthday.toString()
