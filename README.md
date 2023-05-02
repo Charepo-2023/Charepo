@@ -133,6 +133,6 @@ Register, login, and general use.
 
 ## Final APP Walkthrough
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ypbg91Rq9ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+(https://youtu.be/ypbg91Rq9ts)
 
 
