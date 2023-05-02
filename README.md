@@ -4,8 +4,7 @@
 
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-1. [Build Progress](#Build-Progress-GIFs)
+
 
 ## Overview
 
@@ -132,7 +131,8 @@ Register, login, and general use.
 <img src="https://i.imgur.com/GBr6ZcI.gif" alt="Register & login" height=350>       <img src="https://i.imgur.com/zzGbK7G.gif" alt="Register & login" height=350> 
 <img src="https://i.imgur.com/f3tpQK0.gif" alt="Register & login" height=350>       <img src="https://i.imgur.com/iTflnb7.gif" alt="Register & login" height=350>
 
+## Final APP Walkthrough
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ypbg91Rq9ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
